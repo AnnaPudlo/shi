@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Ubuntu:400,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
     <link rel="stylesheet" href="styles/app.css">
 
     <!-- <link rel="icon" href="favicon.ico"> -->
@@ -17,17 +18,22 @@
 
 <body>
 
-    <header class="ba-header">
-        <div class="container">
-            <h1 class="header-title">Shi</h1>
-        </div>
+    <header class="header">
+        <!-- <div class="container"> -->
+            <h1 class="header__title">Cloud</h1>
+        <!-- </div> -->
     </header>
 
     <main>
-        <section class="section-menu">
+        <section class="section-hello-user">
+            <div class="container">
+                <h2 class="hello-title"><span class="typingW"></span></h2>
+            </div>
+        </section>
+        <section class="section-menu hidden">
             <div class="nav-wrap">
                 <div class="nav">
-                    <a href="#" class="nav-item">
+                    <a href="#" class="nav-item wow fadeIn">
                         <div class="nav-item__svg fire">
                             <svg width=238 height=283>
                                 <use xlink:href='#fire'></use>
@@ -35,7 +41,7 @@
                             
                         </div>
                     </a>
-                    <a href="#" class="nav-item">
+                    <a href="#" class="nav-item wow fadeIn delay-1s">
                         <div class="nav-item__svg air">
                             <svg width=238 height=283>
                                 <use xlink:href='#air'></use>
@@ -43,7 +49,7 @@
                             
                         </div>
                     </a>
-                    <a href="#" class="nav-item">
+                    <a href="#" class="nav-item wow fadeIn delay-3s">
                         <div class="nav-item__svg water">
                             <svg width=238 height=283>
                                 <use xlink:href='#water'></use>
@@ -51,7 +57,7 @@
                             
                         </div>
                     </a>
-                    <a href="#" class="nav-item">
+                    <a href="#" class="nav-item wow fadeIn delay-2s">
                         <div class="nav-item__svg ground">
                             <svg width=238 height=283>
                                 <use xlink:href='#ground'></use>
@@ -59,19 +65,19 @@
                             
                         </div>
                     </a>
-                </div>
-                <div class="nav-titles">
-                    <div class="nav-titles__wrap fire">
-                        <h3 class="nav-item__title">Upload</h3>
-                    </div>
-                    <div class="nav-titles__wrap air">
-                        <h3 class="nav-item__title">Shared</h3>
-                    </div>
-                    <div class="nav-titles__wrap water">
-                        <h3 class="nav-item__title">Stream</h3>
-                    </div>
-                    <div class="nav-titles__wrap ground">
-                        <h3 class="nav-item__title">My Files</h3>
+                    <div class="nav-titles">
+                        <div class="nav-titles__wrap fire wow fadeIn">
+                            <h3 class="nav-item__title"><a href="#">Upload</a></h3>
+                        </div>
+                        <div class="nav-titles__wrap air wow fadeIn delay-1s">
+                            <h3 class="nav-item__title"><a href="#">Shared</a></h3>
+                        </div>
+                        <div class="nav-titles__wrap water wow fadeIn delay-3s">
+                            <h3 class="nav-item__title"><a href="#">Stream</a></h3>
+                        </div>
+                        <div class="nav-titles__wrap ground wow fadeIn delay-2s">
+                            <h3 class="nav-item__title"><a href="#">My Files</a></h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,6 +192,12 @@
             </symbol>
         </svg>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/app1.js"></script>
 </body>
 
 </html>

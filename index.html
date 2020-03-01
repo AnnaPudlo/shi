@@ -1,56 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ba-starter</title>
+    <title>Cloud</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Ubuntu:400,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/app.css">
 
-    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="favicon.ico"> -->
 </head>
+
 <body>
 
-    <header class="ba-header">
-        <div class="container">
-
-            <a href="#" class="ba-logo"></a>
-
-            <nav>
-                <ul class="ba-menu">
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
+    <header class="header">
+        <!-- <div class="container"> -->
+        <h1 class="header__title">Cloud</h1>
+        <!-- </div> -->
     </header>
 
     <main>
-        <section class="ba-section">
+        <section class="section-hello">
             <div class="container">
-
+                <h2 class="hello-title"><span class="typing"></span></h2>
+            </div>
+        </section>
+        <section class="section-login hidden">
+            <div class="container">
+                <h2 class="section-login__title">the illusion of security <br> has no power over you</h2>
+                <form action="" class="login-form">
+                    <div class="login-form-wrap">
+                        <div>
+                            <input type="email" name="user-mail" id="user-mail" class="login__inp" placeholder="Email" value="shi@nonameclub.org">
+                            <input type="password" name="user-password" id="user-password" class="login__inp"
+                                placeholder="Password" value="password123">
+                        </div>
+                        <div class="error-message-wrap hidden">
+                            <svg width=16 height=16>
+                                <use xlink:href='#avatar'></use>
+                            </svg>
+                            <p class="error-message">the community knows who are you. <strong>@noname.club</strong> is the only key!</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="login__btn">
+                        <svg width=45 height=45>
+                            <use xlink:href='#btn-submit'></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </section>
     </main>
-    
-    <footer class="ba-footer">
-        <div class="container">
-            
-        </div>
-    </footer>
+
+
+    <div class="visually-hidden">
+        <svg width=0 height=0>
+            <symbol id="btn-submit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 53">
+                <rect x="26.3848" width="37.3137" height="37.3137" transform="rotate(45 26.3848 0)"
+                    fill="currentColor" />
+                <g>
+                    <path
+                        d="M17.9556 26.8331L17.9291 26.8273L29.3047 26.8273L25.7286 30.4113C25.5535 30.5863 25.4574 30.8233 25.4574 31.0721C25.4574 31.3209 25.5535 31.5562 25.7286 31.7316L26.285 32.2883C26.46 32.4633 26.6932 32.5601 26.9418 32.5601C27.1906 32.5601 27.4239 32.464 27.5989 32.289L33.729 26.1595C33.9046 25.9838 34.0007 25.7498 34 25.5009C34.0007 25.2506 33.9046 25.0165 33.729 24.8411L27.5989 18.711C27.4239 18.5362 27.1907 18.44 26.9418 18.44C26.6932 18.44 26.46 18.5363 26.285 18.711L25.7286 19.2677C25.5535 19.4424 25.4574 19.6757 25.4574 19.9245C25.4574 20.1731 25.5535 20.3941 25.7286 20.569L29.345 24.173L17.9429 24.173C17.4305 24.173 17 24.6146 17 25.1266L17 25.914C17 26.4261 17.4432 26.8331 17.9556 26.8331Z"
+                        fill="white" />
+                </g>
+                <defs>
+            </symbol>
+            <symbol id="avatar" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                    <path d="M7.96369 8.38457C7.97395 8.38457 7.9842 8.38457 7.99651 8.38457C8.00061 8.38457 8.00471 8.38457 8.00882 8.38457C8.01497 8.38457 8.02317 8.38457 8.02933 8.38457C8.6303 8.37431 9.11641 8.16305 9.47535 7.75898C10.265 6.86881 10.1338 5.34279 10.1194 5.19716C10.0681 4.10392 9.55124 3.58089 9.12461 3.33681C8.80669 3.15426 8.43545 3.05581 8.02112 3.04761H8.00677C8.00471 3.04761 8.00061 3.04761 7.99856 3.04761H7.98625C7.75858 3.04761 7.31144 3.08453 6.88276 3.32861C6.45203 3.57269 5.92695 4.09572 5.87567 5.19716C5.86131 5.34279 5.73004 6.86881 6.51972 7.75898C6.87661 8.16305 7.36272 8.37431 7.96369 8.38457ZM6.42332 5.24844C6.42332 5.24228 6.42537 5.23613 6.42537 5.23203C6.49305 3.76139 7.53706 3.60346 7.9842 3.60346H7.99241C7.99651 3.60346 8.00266 3.60346 8.00882 3.60346C8.56261 3.61576 9.50407 3.84138 9.56765 5.23203C9.56765 5.23818 9.56765 5.24434 9.5697 5.24844C9.57175 5.2628 9.71533 6.65754 9.06308 7.39184C8.80464 7.68309 8.46006 7.82667 8.00677 7.83077C8.00266 7.83077 8.00061 7.83077 7.99651 7.83077C7.99241 7.83077 7.99036 7.83077 7.98625 7.83077C7.53501 7.82667 7.18838 7.68309 6.93199 7.39184C6.28179 6.66165 6.42127 5.26074 6.42332 5.24844Z" fill="#DB0000" fill-opacity="0.53"/>
+                    <path d="M12.2115 10.9156C12.2115 10.9135 12.2115 10.9115 12.2115 10.9094C12.2115 10.893 12.2095 10.8766 12.2095 10.8582C12.1972 10.452 12.1705 9.50239 11.2803 9.19882C11.2742 9.19677 11.266 9.19472 11.2598 9.19267C10.3348 8.95679 9.56562 8.42351 9.55741 8.41735C9.43229 8.32916 9.26 8.35992 9.1718 8.48504C9.08361 8.61016 9.11437 8.78245 9.23949 8.87065C9.27436 8.89526 10.0907 9.46341 11.1121 9.72596C11.5901 9.8962 11.6434 10.4069 11.6577 10.8746C11.6577 10.893 11.6577 10.9094 11.6598 10.9258C11.6618 11.1104 11.6495 11.3956 11.6167 11.5596C11.2844 11.7483 9.98199 12.4006 8.00063 12.4006C6.02747 12.4006 4.71682 11.7463 4.38249 11.5576C4.34967 11.3935 4.33531 11.1084 4.33941 10.9238C4.33941 10.9074 4.34146 10.891 4.34146 10.8725C4.35582 10.4049 4.40915 9.89415 4.88706 9.7239C5.9085 9.46136 6.72484 8.89116 6.75971 8.86859C6.88483 8.7804 6.91559 8.60811 6.8274 8.48299C6.7392 8.35787 6.56691 8.3271 6.44179 8.4153C6.43359 8.42146 5.66853 8.95474 4.73938 9.19062C4.73117 9.19267 4.72502 9.19472 4.71887 9.19677C3.82869 9.50239 3.80203 10.452 3.78972 10.8561C3.78972 10.8746 3.78972 10.891 3.78767 10.9074C3.78767 10.9094 3.78767 10.9115 3.78767 10.9135C3.78562 11.0202 3.78357 11.5678 3.89227 11.8427C3.91278 11.896 3.9497 11.9411 3.99893 11.9719C4.06046 12.0129 5.5352 12.9523 8.00268 12.9523C10.4702 12.9523 11.9449 12.0109 12.0064 11.9719C12.0536 11.9411 12.0926 11.896 12.1131 11.8427C12.2156 11.5699 12.2136 11.0223 12.2115 10.9156Z" fill="#DB0000" fill-opacity="0.53"/>
+                </g>
+                <circle cx="8" cy="8" r="7.75" stroke="#DB0000" stroke-width="0.5"/>
+                <line x1="13.1294" y1="2.46248" x2="2.46275" y2="13.1291" stroke="#DB0000" stroke-width="0.5"/>
+                <defs>
+                    <clipPath id="clip0">
+                        <rect x="3.04736" y="3.04761" width="9.90476" height="9.90476" fill="white"/>
+                    </clipPath>
+                </defs>
+            </symbol>             
+        </svg>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/app.js"></script>
+
 
 </body>
+
 </html>

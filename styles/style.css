@@ -1,30 +1,37 @@
-html {
-  height: 100%; }
-
 body {
-  background-image: url("../img/background.png");
-  background-repeat: no-repeat;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  min-height: 100%; }
+  font-size: 0; }
 
-* {
-  border: 1px dotted red; }
+.header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  pointer-events: none; }
+  .header__title {
+    font-style: normal;
+    font-weight: 600;
+    /* good for 1920x1080 in Figma, but too much for width: 1200px */
+    color: #003EDE;
+    font-size: 26vmin;
+    line-height: 1em;
+    opacity: 0.3;
+    text-transform: uppercase;
+    margin: 0;
+    background: linear-gradient(89.92deg, #4F96FF -3.19%, rgba(113, 176, 255, 0) 103.81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #003EDE; }
 
-.header-title {
-  font-style: normal;
-  font-weight: 600;
-  /* good for 1920x1080 in Figma, but too much for width: 1200px */
-  color: #003EDE;
-  font-size: 16rem;
-  line-height: 1em;
-  opacity: 0.3;
-  text-transform: uppercase;
-  margin: 0;
-  background: linear-gradient(89.92deg, #4F96FF -3.19%, rgba(113, 176, 255, 0) 103.81%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #003EDE; }
+main {
+  height: 100vh;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .hello-title {
   font-family: 'Ubuntu', sans-serif;
@@ -38,10 +45,8 @@ body {
 .section-login__title {
   font-style: normal;
   font-weight: 600;
-  font-size: 50px;
-  line-height: 70px;
   /* good for 1920x1080 in Figma, but too much for width: 1200px */
-  font-size: 3.425rem;
+  font-size: 2.75rem;
   line-height: 1.38em;
   text-align: center;
   color: #001240; }
@@ -64,11 +69,17 @@ body {
     line-height: 1.1818em;
     color: #DB0000;
     text-align: right; }
+    .login-form .error-message-wrap {
+      display: flex;
+      align-items: center; }
+      .login-form .error-message-wrap svg {
+        margin-left: auto;
+        margin-right: 0.5rem; }
 
 .login__inp {
-  max-width: 286.5px;
+  max-width: 220px;
   width: 100%;
-  height: 52px;
+  height: 45px;
   background: rgba(0, 62, 222, 0.08);
   border: 1px solid #003EDE;
   box-sizing: border-box;
@@ -85,8 +96,8 @@ body {
     border: 1px solid #00DE16; }
 
 .login__btn {
-  width: 52px;
-  height: 52px;
+  width: 45px;
+  height: 45px;
   background-color: transparent;
   color: #003EDE;
   border: none;
@@ -105,7 +116,7 @@ body {
   display: flex;
   flex-wrap: wrap; }
   .nav-wrap {
-    width: 50%;
+    width: 45vmin;
     max-width: 364px;
     position: relative;
     transform: rotate(45deg);
@@ -152,9 +163,10 @@ body {
       font-weight: bold;
       width: fit-content;
       margin: 0;
-      font-size: 2.5vw;
+      font-size: 4vmin;
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      border-bottom: 1px solid transparent; }
       .nav-item__title:before {
         content: '';
         width: 10px;
@@ -164,34 +176,30 @@ body {
         right: -20px;
         top: 50%;
         transform: translateY(-50%); }
-      .nav-item__title:after {
-        content: none;
-        display: block;
-        height: 1px;
-        width: 100%; }
-    .nav-item:hover .nav-item__title:after {
-      content: ''; }
+      .nav-item__title:hover, .nav-item__title.hovered {
+        border-color: inherit; }
+      .nav-item__title a {
+        text-decoration: none;
+        color: inherit; }
     .fire .nav-item__title {
       color: #ffb83d; }
-      .fire .nav-item__title:before, .fire .nav-item__title:after {
+      .fire .nav-item__title:before {
         background-color: #ffb83d; }
     .air .nav-item__title {
       color: #cea1ff;
       margin-left: auto; }
-      .air .nav-item__title:before, .air .nav-item__title:after {
-        background-color: #cea1ff; }
       .air .nav-item__title:before {
+        background-color: #cea1ff;
         left: -20px; }
     .water .nav-item__title {
       color: #70bbcd; }
-      .water .nav-item__title:before, .water .nav-item__title:after {
+      .water .nav-item__title:before {
         background-color: #70BBCD; }
     .ground .nav-item__title {
       color: #bfc652;
       margin-left: auto; }
-      .ground .nav-item__title:before, .ground .nav-item__title:after {
-        background-color: #bfc652; }
       .ground .nav-item__title:before {
+        background-color: #bfc652;
         left: -20px; }
   .nav-titles {
     position: absolute;
@@ -211,23 +219,47 @@ body {
 .fire svg {
   transform: rotate(-45deg); }
 
-.fire:hover svg {
+.fire:hover svg, .fire.hovered svg {
   color: #ff7215; }
 
 .air svg {
   transform: rotate(45deg); }
 
-.air:hover svg {
+.air:hover svg, .air.hovered svg {
   color: #563563; }
 
 .water svg {
   transform: rotate(-135deg); }
 
-.water:hover svg {
+.water:hover svg, .water.hovered svg {
   color: #0085a6; }
 
 .ground svg {
   transform: rotate(135deg); }
 
-.ground:hover svg {
-  color: #284e00; }
+.ground:hover svg, .ground.hovered svg {
+  color: #284E00; }
+
+.section-menu {
+  max-width: 100vw;
+  width: 100%;
+  margin-top: 25vh;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden; }
+
+.typed-cursor {
+  font-weight: 300; }
+
+.hidden {
+  display: none !important; }
+
+.fade-in {
+  animation: fadeIn 1.5s ease 1; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
