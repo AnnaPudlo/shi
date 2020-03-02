@@ -35,6 +35,7 @@ main {
     background-image: url('../img/background.png'); 
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 25% 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,6 +157,93 @@ main {
             content: "";
             display: block;
             padding-top: 100%;
+        }
+        
+        &-mob {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+        }
+    }
+
+    &-mob {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nav-item {
+            display: block;
+            position: static;
+            width: 100%;
+            padding: 0 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-decoration: none;
+
+            &:before {
+                content: none;
+            }
+
+            &__svg {
+                position: static;
+                display: flex;
+                width: 90px;
+                height: 90px;
+                transform: none;
+
+                svg {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            
+
+            &__title {
+                font-size: 1.5rem;
+            }
+        }
+        .fire {
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+            
+        .air {
+            svg {
+                transform: rotate(90deg);
+            }
+
+            .nav-item__title {
+                margin-left: 0;
+            }
+
+            .nav-item__svg {
+                transform: scale(0.9);
+            }
+
+        }
+            
+        .water {
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+            
+        .ground {
+            svg {
+                transform: rotate(90deg);
+            }
+
+            .nav-item__title {
+                margin-left: 0;
+            }            
+
+            .nav-item__svg {
+                transform: scale(0.8);
+            }
         }
     }
 
@@ -372,7 +460,8 @@ main {
 
 @media (max-width: 425px) {
     .header__title {
-        background: linear-gradient(89.92deg, rgb(197, 220, 255) -3.19%, rgba(161, 204, 255, 1) 103.81%);
+        font-size: 5.5rem;
+        background: linear-gradient(89.92deg, rgb(197, 220, 255) -3.19%, rgba(41, 137, 255, 0.75) 103.81%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -413,5 +502,8 @@ main {
     }
     .section-login__title {
         font-size: 1.5rem;
+    }
+    .header__title {
+        font-size: 5rem;
     }
 }
